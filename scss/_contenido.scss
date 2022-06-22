@@ -6,6 +6,7 @@ box-sizing: border-box;
 }    
 
 
+
 /*INDEX*/
 
 .container-fluid {
@@ -494,5 +495,41 @@ box-sizing: border-box;
         width: 90%;
        
     }
+}
+
+
+
+/*modal*/
+.modal-contenedor {
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
+    position: fixed;
+    top:0;
+    left:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s all ease-in-out;
+
+    .modal-carrito {
+        background-color: $color-rosa-clarito;
+        width: 320px;
+        border-radius: 20px;
+        min-height: 300px;
+        padding: 20px;
+    }
+
+
+
+    
+
+}
+
+.modal-container-visible {
+    opacity: 1;
+    visibility: visible;
 }
 
