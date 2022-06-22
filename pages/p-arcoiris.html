@@ -202,7 +202,9 @@
     <div id="modal-container" class="modal-contenedor">
       <div class="modal-carrito faq-item3">
         <h3 class="grid-prod-b1-descripcion">Carrito</h3>
-        <button id="close-modal" class="btn-ghost btn">X</button>
+        <div class="row d-flex justify-content-end">      
+          <button id="close-modal" class="btn-ghost btn">X</button>
+        </div>
         <!--<button id="carritocerrar"></button>-->
         <div id="carrito-contenedor">
 
@@ -216,10 +218,13 @@
         -->
         
         </div>
-        <p class="precioProducto"></p> Precio total: $<span id="precio-total"></span></p>
-        <button id="boton-carrito" class="btn-ghost btn">
-          <span id="contadorCarrito">O</span>
-        </button>
+        <p class="precioProducto"></p> PRECIO TOTAL: $<span id="precio-total"></span></p>
+        <div class=" row d-flex justify-content-center">
+          
+          <button id="boton-carrito" class="boton-borrar btn">PRODUCTOS:
+            <span id="contadorCarrito">O</span>
+          </button>
+        </div>
       </div>
 
       

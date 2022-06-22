@@ -416,9 +416,10 @@ ul {
   visibility: hidden;
   transition: .3s all ease-in-out; }
   .modal-contenedor .modal-carrito {
-    background-color: #F1D6D5;
+    background-color: #CFE8DE;
     width: 320px;
     border-radius: 20px;
+    border: 3px solid #78a1a6;
     min-height: 300px;
     padding: 20px; }
 
