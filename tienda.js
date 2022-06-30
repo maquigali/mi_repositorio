@@ -1,20 +1,43 @@
+//stock 
 
-const productosContainer = document.querySelector("#contenedor-productos")
+const stockProductos = [
+    
+    {id: 1, nombre: "Arcoiris Celeste y Verde", precio: 1800, img: "../img/arcoirisceleste.jpg"},
+    {id: 2, nombre: "Arcoiris Tonos Pastel", precio: 1800, img: "../img/arcoirissandia.jpg"},
+    {id: 3, nombre: "Babita Estampada", precio: 500, img: "../img/babtaanimales.jpg"},    
+    {id: 4, nombre: "Babita Azul", precio: 500, img: "../img/babitaazul.jpg"},
+    {id: 5, nombre: "Set Babitas", precio: 800, img: "../img/babitasx2.jpg"},
+    {id: 6, nombre: "Conejitos de Apego", precio: 900, img: "../img/conejos.jpg"},
 
-const carrito = []
+
+
+]
+
+//otros
+const productosContainer = document.querySelector("#grid-productos")
 
 const carritoContenedor = document.querySelector("#carrito-contenedor")
 
 const contadorCarrito = document.querySelector("#contadorCarrito")
 
-const precioTotal = document.querySelector("#precio-total")
+const btnVaciar = document.querySelector("#vaciarCarrito")
+
+
+let carrito 
+const carritoEnLs = JSON.parse(localStorage.getItem("carrito"))
+
+
+
+const precioTotal = document.getElementById("precio-total")
 
 const modalContainer = document.querySelector("#modal-container")
 const openModal = document.querySelector("#open-modal")
 const closeModal = document.querySelector("#close-modal")
 
+
+//modal
 openModal.addEventListener("click", () => {
-    modalContainer.classList.add("modal-container-visible")
+        modalContainer.classList.add("modal-container-visible")
 
 })
 
@@ -22,28 +45,24 @@ closeModal.addEventListener("click", () => {
     modalContainer.classList.remove("modal-container-visible")
 })
 
+//html
 stockProductos.forEach((item) => {
     console.log(item)
     const div = document.createElement("div")
-    div.classList.add("producto")
+    div.classList.add("elementos-productos")
 
     div.innerHTML = `
-                    
-                <div class="modelos-arcoiris col-sm-12 col-md-6 col-lg-6">
-                    <div class="row g-0 fotos-p-padding" style="border: 3px solid #78A1A6">
-                        <img src=${item.img}  class="img-fluid w-100" alt="arcoiris"> 
-                    </div>
-                    
+                        <div class="elementos-productos">
+                            <div>
+                                <img src=${item.img} class="img-fluid" alt="arcoiris" style="border: 3px solid #78A1A6"> 
+                                <h2 class="grid-prod-b1-descripcion"> <br> ${item.nombre} <br> </h2> 
+                                <h3 class="grid-prod-b1-descripcion"> PRECIO: $ ${item.precio}</h3> 
+                                <div class="justify-content-center">
+                                    <button onclick="agregarAlCarrito(${item.id})" class="btn-ghost btn boton-agregar"> HACÉ TU PEDIDO </button>   
+                                </div>
+                            </div>                        
 
-                    <h2 class="grid-prod-b1-descripcion"> <br> ${item.nombre} <br> </h2> 
-                    <h3 class="grid-prod-b1-descripcion"> PRECIO: $ ${item.precio}</h3> 
-                    <div class="d-flex justify-content-center div-boton-vermodelos">
-                        <button onclick="agregarAlCarrito(${item.id})" class="btn-ghost btn boton-agregar"> HACÉ TU PEDIDO </button>
-                    </div>
-
-
-                </div>
-
+                        </div>
 
                     `
 
@@ -62,6 +81,8 @@ const agregarAlCarrito = (id) => {
     const item = stockProductos.find ( (prod) => prod.id === id )
     carrito.push(item)
 
+    localStorage.setItem("carrito", JSON.stringify(carrito))
+
     console.log(carrito)
     renderCarrito()
     renderCantidad()
@@ -69,10 +90,18 @@ const agregarAlCarrito = (id) => {
 
 }
 
-//const removerDelCarrito = (id) => {
-    //const item = carrito.find((producto) => producto.id === id)
-    //console.log(item)
-//}
+const removerDelCarrito = (id) => {
+    const item = carrito.find((producto) => producto.id === id)
+    const indice = carrito.indexOf (item)
+    carrito.splice(indice, 1)
+
+    localStorage.setItem("carrito", JSON.stringify(carrito))
+
+    renderCarrito()
+    renderCantidad()
+    renderTotal()
+
+}
 
 const renderCarrito = () => {
     carritoContenedor.innerHTML = ""
@@ -87,7 +116,10 @@ const renderCarrito = () => {
                             <div class="productosEnCarrito">
                                 <p>${item.nombre}</p>
                                 <p>Precio: $${item.precio}</p>
-                                
+                                <div class="row justify-content-center">
+                                    <button onclick= "removerDelCarrito(${item.id})"class="btn btn-ghost boton-eliminar">NO LO QUIERO</button>
+                           
+                                </div>
                             </div>
       `
       carritoContenedor.append(div)
@@ -98,9 +130,30 @@ const renderCarrito = () => {
 
 }
 
+//vaciar carrito
+
+const vaciarCarrito = () => {
+    carrito = []
+
+    localStorage.setItem("carrito", JSON.stringify(carrito))
+
+    renderCarrito()
+    renderCantidad()
+    renderTotal()
+
+}
+
+
+
+btnVaciar.addEventListener("click", vaciarCarrito)
+
+//cantidad en carrito
+
 const renderCantidad = () => {
     contadorCarrito.innerText = carrito.length
 }
+
+//total $$
 
 const renderTotal = () => {
     let total = 0
@@ -110,6 +163,27 @@ const renderTotal = () => {
     
         })
 
+
         precioTotal.innerText = total
 
 }
+
+
+//carritoLS
+
+if (carritoEnLs) {
+    carrito = carritoEnLs
+
+    renderCarrito()
+    renderCantidad()
+    renderTotal()
+
+
+} else {
+    carrito = []
+}
+
+//Storage Y JSON
+
+localStorage.setItem("Productos", JSON.stringify(stockProductos))
+localStorage.setItem("Cantidad", JSON.stringify(carrito.length))

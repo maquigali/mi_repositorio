@@ -1,3 +1,20 @@
+
+
+const productos = JSON.parse(localStorage.getItem("Productos"))
+
+console.log(productos)
+
+const cantidad = JSON.parse(localStorage.getItem("Cantidad"))
+
+console.log(cantidad)
+
+const contadorCarrito = document.getElementById("contadorCarritoAI")
+
+contadorCarrito.innerText = cantidad
+
+
+
+
 // let nombre = prompt("Ingrese su nombe:")
 // console.log("Hola " + nombre + "!")
 
@@ -101,12 +118,17 @@
 
 
 
-const stockProductos = [
-    
-    {id: 1, nombre: "Arcoiris Celeste y Verde", precio: 1800, img: "../img/arcoirisceleste.jpg"},
-    {id: 2, nombre: "Arcoiris Tonos Pastel", precio: 1800, img: "../img/arcoirissandia.jpg"},
-    {id: 3, nombre: "Cmbo Arcoiris", precio: 3200, img: "../img/arcoiris.jpg"},
 
 
 
-]
+
+
+
+
+
+
+
+
+
+
+

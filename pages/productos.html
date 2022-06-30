@@ -12,7 +12,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Poppins:wght@400;700&display=swap" rel="stylesheet">   
+    <script defer src="../tienda.js"></script>
 </head>
 
 <body class="body-background">
@@ -82,15 +83,76 @@
             </div>               
 
         </div>
-        </div>           
+      </div>           
 
 
     </nav>
   </header>
            
+<!--MAIN CON TIENDA-->
+
+<main id="contenedor-all-products" class="container">
+  <div class="clearfix" style="margin-bottom: 80px;"></div>
+
+  
+    <div class="row">
+      <div class="text-center">
+        <h1 class="col-12 titulo-grande" >NUESTROS PRODUCTOS</h1>
+      </div>  
+    </div>  
+    <div class="clearfix" style="margin-bottom: 50px;"></div>
+    
+  
+
+  <div id="grid-productos" class="grid-productos">
+  
+    
+  </div>
+
+</main>
+
+<!--MODAL/CARRITO-->
 
 
-  <!--MAIN-->
+
+<div class="carrito-contador row d-flex justify-content-center">
+  <button id="open-modal" class="boton-mas-info btn">PRODUCTOS EN CARRITO:
+    <span id="contadorCarrito">O</span>
+  </button>
+</div>
+
+
+
+<div id="modal-container" class="modal-contenedor">
+  <div class="modal-carrito faq-item3">
+    <h3 class="grid-prod-b1-descripcion">Carrito</h3>
+    <div class="row d-flex justify-content-end">      
+      <button id="close-modal" class="btn-ghost btn">X</button>
+    </div>
+    
+    <div id="carrito-contenedor">     
+    
+    </div>
+
+    <p class="precioProducto"></p> PRECIO TOTAL: $<span id="precio-total"></span></p>
+    <div class="row d-flex justify-content-center">     
+      
+      <button id="vaciarCarrito" class="boton-eliminar btn boton-borrar"> VACIAR CARRITO </button>
+    </div>
+  </div>
+
+  
+
+</div>
+
+
+
+
+
+
+
+
+  <!--MAIN TODOS LOS PRODUCTOS POR CATEGORIAS SIN TIENDA
   <main>
 
     <div class="clearfix" style="margin-bottom: 80px;"></div>
@@ -103,7 +165,7 @@
       <div class="clearfix" style="margin-bottom: 50px;"></div>
       </div>
     
-        <!--ROW: ARCOIRIS /BABITAS/ CUBOS SENSORIALES-->
+        ROW: ARCOIRIS /BABITAS/ CUBOS SENSORIALES
     
       <div class="row">
       <div class="col-sm-12 col-md-4 col-lg-4">               
@@ -152,7 +214,7 @@
       </div>         
         
       
-      <!--ROW: LIBRITO SOFT / PELOTAS MONTESSORI / MORDILLOS-->
+      ROW: LIBRITO SOFT / PELOTAS MONTESSORI / MORDILLOS
 
       <div class="row">
         <div class="col-sm-12 col-md-4 col-lg-4">   
@@ -198,7 +260,7 @@
         </div>  
       </div>
       
-      <!--ROW:PIZARRONES / PORTACHUPETES / CONEJOS-->
+      ROW:PIZARRONES / PORTACHUPETES / CONEJOS
       <div class="row">
         <div class="col-sm-12 col-md-4 col-lg-4">            
             <div class="row g-0" style="border: 3px solid #78A1A6">
@@ -246,7 +308,7 @@
 
       </div>
         
-    <!--ROW: ROMPECABEZAS / MEMOTEST/ COMBOS-->
+    ROW: ROMPECABEZAS / MEMOTEST/ COMBOS
       <div class="row">
         <div class="col-sm-12 col-md-4 col-lg-4">
           <div class="row g-0" style="border: 3px solid #78A1A6">
@@ -292,7 +354,10 @@
         </div>
       </div>
     </div>
-  </main>    
+  </main>  -->   
+
+  
+  
       
 
  <!--FOOTER-->
