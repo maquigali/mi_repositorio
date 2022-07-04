@@ -452,6 +452,19 @@ box-sizing: border-box;
     margin: 50px;
 }
 
+/*TOASTY*/
+
+.toastyAgregado-style {
+    background: $color-rosa-clarito;
+    width: max-content;
+    color: $color-rosa-oscuro;
+    font-family: $tipografia;
+    font-size:medium;
+    border-radius: 20px;
+    border: 3px solid $color-rosa-oscuro;
+}
+
+
 
 
 @media screen and (max-width: 768px) {    

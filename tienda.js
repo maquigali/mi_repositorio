@@ -34,6 +34,8 @@ const modalContainer = document.querySelector("#modal-container")
 const openModal = document.querySelector("#open-modal")
 const closeModal = document.querySelector("#close-modal")
 
+const btnTosty = document.querySelector("#tostyAgregado")
+
 
 //modal
 openModal.addEventListener("click", () => {
@@ -58,7 +60,7 @@ stockProductos.forEach((item) => {
                                 <h2 class="grid-prod-b1-descripcion"> <br> ${item.nombre} <br> </h2> 
                                 <h3 class="grid-prod-b1-descripcion"> PRECIO: $ ${item.precio}</h3> 
                                 <div class="justify-content-center">
-                                    <button onclick="agregarAlCarrito(${item.id})" class="btn-ghost btn boton-agregar"> HACÉ TU PEDIDO </button>   
+                                    <button onclick="agregarAlCarrito(${item.id})" id="tostyAgregado" class="btn-ghost btn boton-agregar"> LO QUIERO! </button>   
                                 </div>
                             </div>                        
 
@@ -80,6 +82,8 @@ stockProductos.forEach((item) => {
 const agregarAlCarrito = (id) => {
     const item = stockProductos.find ( (prod) => prod.id === id )
     carrito.push(item)
+
+    toastyAgregadoCarrito (item.nombre)
 
     localStorage.setItem("carrito", JSON.stringify(carrito))
 
@@ -182,6 +186,24 @@ if (carritoEnLs) {
 } else {
     carrito = []
 }
+
+//TOASTY
+
+const toastyAgregadoCarrito = (producto) => {
+
+    Toastify({
+
+        className: "toastyAgregado-style",   
+        text: `Agregaste ${producto} al Carrito!`,        
+        duration: 3000,   
+        gravity: `bottom`,
+        position: `right`,   
+      
+    
+    
+    }).showToast();
+}
+
 
 //Storage Y JSON
 
