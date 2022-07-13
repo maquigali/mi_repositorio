@@ -1,17 +1,44 @@
 
 
-const productos = JSON.parse(localStorage.getItem("Productos"))
+//const productos = JSON.parse(localStorage.getItem("Productos"))
 
-console.log(productos)
+//console.log(productos)
 
-const cantidad = JSON.parse(localStorage.getItem("Cantidad"))
+//const cantidad = JSON.parse(localStorage.getItem("Cantidad"))
 
-console.log(cantidad)
+//console.log(cantidad)
 
-const contadorCarrito = document.getElementById("contadorCarritoAI")
+//const contadorCarrito = document.getElementById("contadorCarritoAI")
 
-contadorCarrito.innerText = cantidad
+//contadorCarrito.innerText = cantidad
 
+
+const lista = document.getElementById("productos-wa")
+
+fetch ("./tienda.json")
+    .then((res) => res.json())
+    .then((data) => {
+
+        console.log(data)
+
+        data.forEach(item => {
+            const div = document.createElement("div")
+            div.innerHTML = `
+            <div class="elementos-productos">
+                <div>
+                    <img src=${item.img} class="img-fluid" alt="arcoiris" style="border: 3px solid #78A1A6"> 
+                    <h2 class="grid-prod-b1-descripcion"> <br> ${item.nombre} <br> </h2> 
+                    <h3 class="grid-prod-b1-descripcion"> PRECIO: $ ${item.precio}</h3>                     
+                </div>                        
+
+            </div>
+
+        `
+
+        lista.append(div)
+            
+        });
+    })
 
 
 
