@@ -15,7 +15,7 @@
 
 const lista = document.getElementById("productos-wa")
 
-fetch ("./tienda.json")
+fetch ("../tienda.json")
     .then((res) => res.json())
     .then((data) => {
 
