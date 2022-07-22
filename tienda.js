@@ -28,7 +28,7 @@ const btnTosty = document.querySelector("#tostyAgregado")
 
 //filtro-buscador
 
-const productosprueba  = [
+let productosprueba  = [
     {nombre: "Pelotas Montessri"},
     {nombre: "Cubo Sensorial"},
     {nombre: "Memotest"},
