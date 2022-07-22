@@ -1,16 +1,16 @@
 
 
-//const productos = JSON.parse(localStorage.getItem("Productos"))
+const productos = JSON.parse(localStorage.getItem("Productos"))
 
-//console.log(productos)
+console.log(productos)
 
-//const cantidad = JSON.parse(localStorage.getItem("Cantidad"))
+const cantidad = JSON.parse(localStorage.getItem("Cantidad"))
 
-//console.log(cantidad)
+console.log(cantidad)
 
-//const contadorCarrito = document.getElementById("contadorCarritoAI")
+const contadorCarrito = document.getElementById("contadorCarritoAI")
 
-//contadorCarrito.innerText = cantidad
+contadorCarrito.innerText = cantidad
 
 
 const lista = document.getElementById("productos-wa")
