@@ -47,7 +47,7 @@ const filtrar = () => {
         let nombre = producto.nombre.toLowerCase();
         if(nombre.indexOf(texto) !== -1){
             resultado.innerHTML += `
-            <li>${producto.nombre} - Valor ${producto.valor}</li>`
+            <li>${productosprueba.nombre} - Valor ${productosprueba.valor}</li>`
 
         }
 
