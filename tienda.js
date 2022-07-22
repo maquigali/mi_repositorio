@@ -28,47 +28,6 @@ const btnTosty = document.querySelector("#tostyAgregado")
 
 //filtro-buscador
 
-let productosprueba  = [
-    {nombre: "Pelotas Montessri"},
-    {nombre: "Cubo Sensorial"},
-    {nombre: "Memotest"},
-
-
-]
-
-
-const formulario = document.querySelector("#buscador-formulario")
-
-const botonBuscador = document.querySelector("#boton-buscador")
-const resultado = document.querySelector("#resultado")
-
-const filtrar = () =>{
-    resultado.innerHTML = ""
-
-    const texto = formulario.value.toLowerCase()
-
-    for(let producto of productosprueba){
-        let nombre = producto.nombre.toLowerCase()
-        if(nombre.indexOf(texto) !== -1){
-            resultado.innerHTML += `
-            <li>${productosprueba.nombre}</li>
-            `
-
-        }
-
-    }
-
-    if(resultado.innerHTML === ""){
-        resultado.innerHTML += `
-        <li>PRODCUTO NO ENCONTRADO </li>
-        `
-    }
-}
-
-botonBuscador.addEventListener("click", filtrar)
-formulario.addEventListener("keyup", filtrar)
-
-filtrar()
 
 //modal
 openModal.addEventListener("click", () => {
