@@ -27,47 +27,47 @@ const btnTosty = document.querySelector("#tostyAgregado")
 
 
 //filtro-buscador
-let productosprueba  = [
-    {nombre:"Pelotas", valor: 500},
-    {nombre:"Cubo", valor: 500},
-    {nombre:"Memotest", valor:500},
+// let productosprueba  = [
+//     {nombre:"Pelotas", valor: 500},
+//     {nombre:"Cubo", valor: 500},
+//     {nombre:"Memotest", valor:500},
 
 
-]
+// ]
 
 
-const formulario = document.querySelector("#buscador-formulario")
+// const formulario = document.querySelector("#buscador-formulario")
 
-const botonBuscador = document.querySelector("#boton-buscador")
-const resultado = document.querySelector("#resultado")
+// const botonBuscador = document.querySelector("#boton-buscador")
+// const resultado = document.querySelector("#resultado")
 
-const filtrar = () =>{
-    resultado.innerHTML = ""
+// const filtrar = () =>{
+//     resultado.innerHTML = ""
 
-    const texto = formulario.value.toLowerCase()
+//     const texto = formulario.value.toLowerCase()
 
-    for(let producto of productosprueba){
-        let nombre = producto.nombre.toLowerCase()
-        if(nombre.indexOf(texto) !== -1){
-            resultado.innerHTML += `
-            <li>${producto.nombre}</li>
-            `
+//     for(let producto of productosprueba){
+//         let nombre = producto.nombre.toLowerCase()
+//         if(nombre.indexOf(texto) !== -1){
+//             resultado.innerHTML += `
+//             <li>${producto.nombre}</li>
+//             `
 
-        }
+//         }
 
-    }
+//     }
 
-    if(resultado.innerHTML === ""){
-        resultado.innerHTML += `
-        <li>PRODCUTO NO ENCONTRADO </li>
-        `
-    }
-}
+//     if(resultado.innerHTML === ""){
+//         resultado.innerHTML += `
+//         <li>PRODCUTO NO ENCONTRADO </li>
+//         `
+//     }
+// }
 
-botonBuscador.addEventListener("click", filtrar)
-formulario.addEventListener("keyup", filtrar)
+// botonBuscador.addEventListener("click", filtrar)
+// formulario.addEventListener("keyup", filtrar)
 
-filtrar()
+// filtrar()
 
 //modal
 openModal.addEventListener("click", () => {
