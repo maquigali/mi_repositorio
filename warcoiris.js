@@ -13,35 +13,35 @@ const contadorCarrito = document.getElementById("contadorCarritoAI")
 contadorCarrito.innerText = cantidad
 
 
-const lista = document.getElementById("productos-wa")
+// const lista = document.getElementById("productos-wa")
 
-fetch ("../tienda.json")
-    .then((res) => res.json())
-    .then((data) => {
+// fetch ("../tienda.json")
+//     .then((res) => res.json())
+//     .then((data) => {
 
-        console.log(data)
+//         console.log(data)
 
-        data.forEach(item => {
-            const div = document.createElement("div")
-            div.innerHTML = `
-            <div class="elementos-productos">
-                <div>
-                <img src=${item.img} class="img-fluid" alt="arcoiris" style="border: 3px solid #78A1A6"> 
-                <h2 class="grid-prod-b1-descripcion"> <br> ${item.nombre} <br> </h2> 
-                <h3 class="grid-prod-b1-descripcion"> PRECIO: $ ${item.precio}</h3> 
-                <div class="justify-content-center">
-                    <button onclick="agregarAlCarrito(${item.id})" id="tostyAgregado" class="btn-ghost btn boton-agregar"> LO QUIERO! </button>   
-                </div>
-                </div>                        
+//         data.forEach(item => {
+//             const div = document.createElement("div")
+//             div.innerHTML = `
+//             <div class="elementos-productos">
+//                 <div>
+//                 <img src=${item.img} class="img-fluid" alt="arcoiris" style="border: 3px solid #78A1A6"> 
+//                 <h2 class="grid-prod-b1-descripcion"> <br> ${item.nombre} <br> </h2> 
+//                 <h3 class="grid-prod-b1-descripcion"> PRECIO: $ ${item.precio}</h3> 
+//                 <div class="justify-content-center">
+//                     <button onclick="agregarAlCarrito(${item.id})" id="tostyAgregado" class="btn-ghost btn boton-agregar"> LO QUIERO! </button>   
+//                 </div>
+//                 </div>                        
 
-            </div>
+//             </div>
 
-        `
+//         `
 
-        lista.append(div)
+//         lista.append(div)
             
-        });
-    })
+//         });
+//     })
 
 
 

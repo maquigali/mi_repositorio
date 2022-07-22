@@ -1,16 +1,3 @@
-//stock 
-
-
-    
-    // {id: 1, nombre: "Arcoiris Celeste y Verde", precio: 1800, img: "../img/arcoirisceleste.jpg"},
-    // {id: 2, nombre: "Arcoiris Tonos Pastel", precio: 1800, img: "../img/arcoirissandia.jpg"},
-    // {id: 3, nombre: "Babita Estampada", precio: 500, img: "../img/babtaanimales.jpg"},    
-    // {id: 4, nombre: "Babita Azul", precio: 500, img: "../img/babitaazul.jpg"},
-    // {id: 5, nombre: "Set Babitas", precio: 800, img: "../img/babitasx2.jpg"},
-    // {id: 6, nombre: "Conejitos de Apego", precio: 900, img: "../img/conejos.jpg"},
-
-
-
 
 
 //otros
@@ -36,6 +23,44 @@ const closeModal = document.querySelector("#close-modal")
 
 const btnTosty = document.querySelector("#tostyAgregado")
 
+
+const formulario = document.querySelector("#buscador-formulario")
+const botonBuscador = document.querySelector("#boton-buscador")
+
+//filtro-buscador
+
+const productosprueba  = [
+    {nombre: "Pelotas Montessri", Valor: 1500},
+    {nombre: "Cubo Sensorial", Valor: 1500},
+    {nombre: "Memotest", Valor: 1500},
+
+
+]
+
+const resultado = document.querySelector("#resultado")
+const filtrar = () => {
+    resultado.innerHTML = "";
+
+    const texto = formulario.value.toLowerCase();
+
+    for(let producto of productospureba){
+        let nombre = producto.nombre.toLowerCase();
+        if(nombre.indexOf(texto) !== -1){
+            resultado.innerHTML += `
+            <li>${producto.nombre} - Valor ${producto.valor}</li>`
+
+        }
+
+    }
+
+    if(resultado.innerHTML === ""){
+        resultado.innerHTML += `
+        <li>PRODCUTO NO ENCONTRADO </li>
+        `
+    }
+}
+
+botonBuscador.addEventListener("click", filtrar)
 
 //modal
 openModal.addEventListener("click", () => {
