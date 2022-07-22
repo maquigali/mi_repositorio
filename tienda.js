@@ -38,12 +38,13 @@ const productosprueba  = [
 ]
 
 const resultado = document.querySelector("#resultado")
+
 const filtrar = () => {
     resultado.innerHTML = "";
 
     const texto = formulario.value.toLowerCase();
 
-    for(let producto of productospureba){
+    for(let producto of productosprueba){
         let nombre = producto.nombre.toLowerCase();
         if(nombre.indexOf(texto) !== -1){
             resultado.innerHTML += `
