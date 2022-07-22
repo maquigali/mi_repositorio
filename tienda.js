@@ -24,8 +24,7 @@ const closeModal = document.querySelector("#close-modal")
 const btnTosty = document.querySelector("#tostyAgregado")
 
 
-const formulario = document.querySelector("#buscador-formulario")
-const botonBuscador = document.querySelector("#boton-buscador")
+
 
 //filtro-buscador
 
@@ -36,7 +35,8 @@ const productosprueba  = [
 
 
 ]
-
+const formulario = document.querySelector("#buscador-formulario")
+const botonBuscador = document.querySelector("#boton-buscador")
 const resultado = document.querySelector("#resultado")
 
 const filtrar = () => {
