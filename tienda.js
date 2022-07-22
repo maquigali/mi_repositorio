@@ -205,7 +205,6 @@ const toastyAgregadoCarrito = (producto) => {
 }
 
 
-
 //Storage Y JSON
 
 localStorage.setItem("Productos", JSON.stringify(stockProductos))
