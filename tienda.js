@@ -48,7 +48,8 @@ const filtrar = () => {
         let nombre = producto.nombre.toLowerCase();
         if(nombre.indexOf(texto) !== -1){
             resultado.innerHTML += `
-            <li>${productosprueba.nombre} - Valor ${productosprueba.valor}</li>`
+            <li>${productosprueba.nombre} - Valor ${productosprueba.valor}</li>
+            `
 
         }
 
@@ -62,6 +63,9 @@ const filtrar = () => {
 }
 
 botonBuscador.addEventListener("click", filtrar)
+formulario.addEventListener("keyup", filtrar)
+
+filtrar();
 
 //modal
 openModal.addEventListener("click", () => {
