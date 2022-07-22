@@ -29,9 +29,9 @@ const btnTosty = document.querySelector("#tostyAgregado")
 //filtro-buscador
 
 const productosprueba  = [
-    {nombre: "Pelotas Montessri", valor: 1500},
-    {nombre: "Cubo Sensorial", valor: 1500},
-    {nombre: "Memotest", valor: 1500},
+    {nombre: "Pelotas Montessri"},
+    {nombre: "Cubo Sensorial"},
+    {nombre: "Memotest"},
 
 
 ]
@@ -51,7 +51,7 @@ const filtrar = () =>{
         let nombre = producto.nombre.toLowerCase()
         if(nombre.indexOf(texto) !== -1){
             resultado.innerHTML += `
-            <li>${productosprueba.nombre} - Valor ${productosprueba.valor}</li>
+            <li>${productosprueba.nombre}</li>
             `
 
         }
