@@ -1,17 +1,17 @@
 //stock 
 
-const stockProductos = [
+
     
-    {id: 1, nombre: "Arcoiris Celeste y Verde", precio: 1800, img: "../img/arcoirisceleste.jpg"},
-    {id: 2, nombre: "Arcoiris Tonos Pastel", precio: 1800, img: "../img/arcoirissandia.jpg"},
-    {id: 3, nombre: "Babita Estampada", precio: 500, img: "../img/babtaanimales.jpg"},    
-    {id: 4, nombre: "Babita Azul", precio: 500, img: "../img/babitaazul.jpg"},
-    {id: 5, nombre: "Set Babitas", precio: 800, img: "../img/babitasx2.jpg"},
-    {id: 6, nombre: "Conejitos de Apego", precio: 900, img: "../img/conejos.jpg"},
+    // {id: 1, nombre: "Arcoiris Celeste y Verde", precio: 1800, img: "../img/arcoirisceleste.jpg"},
+    // {id: 2, nombre: "Arcoiris Tonos Pastel", precio: 1800, img: "../img/arcoirissandia.jpg"},
+    // {id: 3, nombre: "Babita Estampada", precio: 500, img: "../img/babtaanimales.jpg"},    
+    // {id: 4, nombre: "Babita Azul", precio: 500, img: "../img/babitaazul.jpg"},
+    // {id: 5, nombre: "Set Babitas", precio: 800, img: "../img/babitasx2.jpg"},
+    // {id: 6, nombre: "Conejitos de Apego", precio: 900, img: "../img/conejos.jpg"},
 
 
 
-]
+
 
 //otros
 const productosContainer = document.querySelector("#grid-productos")
@@ -48,9 +48,12 @@ closeModal.addEventListener("click", () => {
 })
 
 //html
+let stockProductos = []
+
 fetch ("../tienda.json")
     .then((res) => res.json())
     .then((data) => {
+        stockProductos = data
 
         data.forEach((item) => {
             console.log(item)
