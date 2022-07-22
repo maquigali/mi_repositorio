@@ -30,9 +30,9 @@ const botonBuscador = document.querySelector("#boton-buscador")
 //filtro-buscador
 
 const productosprueba  = [
-    {nombre: "Pelotas Montessri", Valor: 1500},
-    {nombre: "Cubo Sensorial", Valor: 1500},
-    {nombre: "Memotest", Valor: 1500},
+    {nombre: "Pelotas Montessri", valor: 1500},
+    {nombre: "Cubo Sensorial", valor: 1500},
+    {nombre: "Memotest", valor: 1500},
 
 
 ]
