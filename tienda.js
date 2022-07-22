@@ -31,10 +31,11 @@ const btnTosty = document.querySelector("#tostyAgregado")
 const productosprueba  = [
     {nombre: "Pelotas Montessri", valor: 1500},
     {nombre: "Cubo Sensorial", valor: 1500},
-    {nombre: "Memotest", valor: 1500},
+    {nombre: "Memotest", valor: 1500}
 
 
 ]
+
 const formulario = document.querySelector("#buscador-formulario")
 const botonBuscador = document.querySelector("#boton-buscador")
 const resultado = document.querySelector("#resultado")
