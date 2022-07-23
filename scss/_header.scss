@@ -90,12 +90,12 @@ ul {
 
             .dropdown-item {
 
-                text-decoration: overline;
+                text-decoration: none;
                 color: $color-rosa-oscuro;
                 width: 100%;    
                 display: block;                       
                 font-family: $tipografia;
-                font-size: medium; 
+                font-size: small; 
                 padding: 0; 
                 padding-left: 2%;     
                 padding-right: 2%;         
@@ -108,6 +108,8 @@ ul {
                 background-color: transparent;
                 font-weight: bold;
             }
+
+            
         } 
     }
 }

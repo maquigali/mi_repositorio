@@ -28,11 +28,36 @@ const btnTosty = document.querySelector("#tostyAgregado")
 
 //filtro-buscador
 let productosprueba  = [
-    {nombre:"Pelotas", valor: 500},
-    {nombre:"Cubo", valor: 500},
-    {nombre:"Memotest", valor:500}
+    {nombre:"VER TODOS", href: "../pages/productos.html"},
+    {nombre:"COMBOS", href: "../pages/p-combos.html"},
+    {nombre:"ARCOIRIS WALDORF", href: "../pages/p-arcoiris.html"},
+    {nombre:"BABITAS", href:"../pages/p-babitas.html"},
+    {nombre:"CONEJITOS DE APEGO", href: "../pages/p-conejos.html"},
+    {nombre:"CUBOS SENSORIALES", href: "../pages/p-cubos.html"},
+    {nombre:"MEMOTEST", href:"../pages/p-memotest.html"},
+    {nombre:"MINI LIBRITO SOFT", href: "../pages/p-librito.html"},
+    {nombre:"MORDILLOS", href: "../pages/p-mordillo.html"},
+    {nombre:"PELOTAS MONTESSORI", href:"../pages/p-pelota.html"},
+    {nombre:"PIZARRÓN MUMA", href: "../pages/p-pizarron.html"},
+    {nombre:"PORTACHUPETES", href: "../pages/p-portachu.html"},
+    {nombre:"VALIJITA-ROMPECABEZAS", href:"../pages/p-rompecabezas.html"}
 
 ]
+
+
+{/* <li><a class="dropdown-item h3" href="../pages/productos.html"> VER TODOS </a></li>
+                        <li><a class="dropdown-item h3" href="../pages/p-combos.html"> COMBOS </a></li>
+                        <li><a class="dropdown-item h3" href="../pages/p-arcoiris.html"> ARCOIRIS WALDORF </a></li>
+                        <li><a class="dropdown-item h3" href="../pages/p-babitas.html"> BABITAS </a></li>
+                        <li><a class="dropdown-item h3" href="../pages/p-conejos.html"> CONEJITOS DE APEGO</a></li>
+                        <li><a class="dropdown-item h3" href="../pages/p-cubos.html"> CUBOS SENSORIALES </a></li>
+                        <li><a class="dropdown-item h3" href="../pages/p-librito.html"> LIBRITO MUMA SOFT </a></li>
+                        <li><a class="dropdown-item h3" href="../pages/p-pelota.html"> PELOTAS MONTESSORI </a></li>
+                        <li><a class="dropdown-item h3" href="../pages/p-memotest.html"> MEMOTEST </a></li>
+                        <li><a class="dropdown-item h3" href="../pages/p-mordillo.html"> MORDILLOS </a></li>
+                        <li><a class="dropdown-item h3" href="../pages/p-pizarron.html"> PIZARRÓN MUMA </a></li>
+                        <li><a class="dropdown-item h3" href="../pages/p-portachu.html"> PORTACHUPETES </a></li>
+                        <li><a class="dropdown-item h3" href="../pages/p-rompecabezas.html"> VALIJITA-ROMPECABEZAS</a></li> */}
 
 
 
@@ -40,7 +65,6 @@ let productosprueba  = [
 
 const formulario = document.querySelector("#buscador-formulario")
 
-const botonBuscador = document.querySelector("#boton-buscador")
 const resultado = document.querySelector("#resultado")
 
 const filtrar = () =>{
@@ -54,10 +78,10 @@ const filtrar = () =>{
         if(nombre.indexOf(texto) !== -1){
 
             const div = document.createElement("li")
-            div.classList.add("resultado")
+            div.classList.add("menu-desplegable")
 
             resultado.innerHTML += `
-            <li>${producto.nombre}</li>
+            <li><a class="dropdown-item h3" href=${producto.href}> ${producto.nombre} </a></li>
             `
 
         }
@@ -66,7 +90,7 @@ const filtrar = () =>{
 
     if(resultado.innerHTML === ""){
         resultado.innerHTML += `
-        <li>PRODUCTO NO ENCONTRADO </li>
+        <li> <a class="dropdown-item h3"> Ups! No tenemos ese producto </a> </li>
         `
     }
 }

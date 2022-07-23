@@ -49,12 +49,12 @@ ul {
       border-radius: 8px;
       padding-right: 10px; }
       ul li .dropdown-menu .dropdown-item {
-        text-decoration: overline;
+        text-decoration: none;
         color: #DB9996;
         width: 100%;
         display: block;
         font-family: "Poppins", sans-serif;
-        font-size: medium;
+        font-size: small;
         padding: 0;
         padding-left: 2%;
         padding-right: 2%; }
@@ -293,6 +293,14 @@ ul {
   text-align: center; }
 
 /*CONTACTO*/
+.buscador-menu {
+  background-color: white;
+  border-radius: 18px;
+  width: 100%;
+  height: auto;
+  border: 2px solid #DB9996;
+  border-color: #F1D6D5; }
+
 .label-nombre {
   background-color: #CFE8DE;
   border-radius: 18px;
