@@ -34,7 +34,9 @@ ul {
       padding: 10px;
       font-family: "Poppins", sans-serif;
       display: inline;
-      font-size: large; }
+      font-size: large;
+      width: 90%;
+      max-width: 1000px; }
     ul li .nav-link:hover {
       background-color: transparent;
       font-weight: bold;
@@ -43,24 +45,38 @@ ul {
       width: auto;
       text-align: left;
       background-color: #faf0e5;
-      white-space: pre-line;
+      white-space: normal;
       border-color: #DB9996;
       border: 2px solid #DB9996;
       border-radius: 8px;
       padding-right: 10px; }
+      ul li .dropdown-menu .buscador-menu {
+        color: #DB9996;
+        padding: 5px; }
+      ul li .dropdown-menu .buscador-menu:focus {
+        outline: none; }
+      ul li .dropdown-menu .buscador-menu:hover {
+        background-color: #F1D6D5;
+        border: 2px solid #DB9996;
+        border-radius: 16px; }
       ul li .dropdown-menu .dropdown-item {
         text-decoration: none;
         color: #DB9996;
         width: 100%;
         display: block;
         font-family: "Poppins", sans-serif;
-        font-size: small;
+        font-size: medium;
         padding: 0;
         padding-left: 2%;
         padding-right: 2%; }
       ul li .dropdown-menu .dropdown-item:hover {
         background-color: transparent;
         font-weight: bold; }
+
+::placeholder {
+  color: #DB9996;
+  padding: 5px;
+  text-align: center; }
 
 .menu-fixed {
   position: fixed;

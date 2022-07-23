@@ -1,6 +1,6 @@
 
 
-//otros
+
 const productosContainer = document.querySelector("#grid-productos")
 
 const carritoContenedor = document.querySelector("#carrito-contenedor")
@@ -23,13 +23,19 @@ const closeModal = document.querySelector("#close-modal")
 
 const btnTosty = document.querySelector("#tostyAgregado")
 
+const formulario = document.querySelector("#buscador-formulario")
+
+const resultado = document.querySelector("#resultado")
 
 
 
-//filtro-buscador
+
+
+//filtro-buscador BARRA MENU
+
 let productosprueba  = [
-    {nombre:"VER TODOS", href: "../pages/productos.html"},
-    {nombre:"COMBOS", href: "../pages/p-combos.html"},
+    {nombre:"TIENDA MUMA!", href: "../pages/productos.html"},
+    {nombre:"ARMÁ TU COMBO", href: "../pages/p-combos.html"},
     {nombre:"ARCOIRIS WALDORF", href: "../pages/p-arcoiris.html"},
     {nombre:"BABITAS", href:"../pages/p-babitas.html"},
     {nombre:"CONEJITOS DE APEGO", href: "../pages/p-conejos.html"},
@@ -45,27 +51,6 @@ let productosprueba  = [
 ]
 
 
-{/* <li><a class="dropdown-item h3" href="../pages/productos.html"> VER TODOS </a></li>
-                        <li><a class="dropdown-item h3" href="../pages/p-combos.html"> COMBOS </a></li>
-                        <li><a class="dropdown-item h3" href="../pages/p-arcoiris.html"> ARCOIRIS WALDORF </a></li>
-                        <li><a class="dropdown-item h3" href="../pages/p-babitas.html"> BABITAS </a></li>
-                        <li><a class="dropdown-item h3" href="../pages/p-conejos.html"> CONEJITOS DE APEGO</a></li>
-                        <li><a class="dropdown-item h3" href="../pages/p-cubos.html"> CUBOS SENSORIALES </a></li>
-                        <li><a class="dropdown-item h3" href="../pages/p-librito.html"> LIBRITO MUMA SOFT </a></li>
-                        <li><a class="dropdown-item h3" href="../pages/p-pelota.html"> PELOTAS MONTESSORI </a></li>
-                        <li><a class="dropdown-item h3" href="../pages/p-memotest.html"> MEMOTEST </a></li>
-                        <li><a class="dropdown-item h3" href="../pages/p-mordillo.html"> MORDILLOS </a></li>
-                        <li><a class="dropdown-item h3" href="../pages/p-pizarron.html"> PIZARRÓN MUMA </a></li>
-                        <li><a class="dropdown-item h3" href="../pages/p-portachu.html"> PORTACHUPETES </a></li>
-                        <li><a class="dropdown-item h3" href="../pages/p-rompecabezas.html"> VALIJITA-ROMPECABEZAS</a></li> */}
-
-
-
-
-
-const formulario = document.querySelector("#buscador-formulario")
-
-const resultado = document.querySelector("#resultado")
 
 const filtrar = () =>{
     resultado.innerHTML = ""

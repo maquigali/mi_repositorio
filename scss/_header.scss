@@ -67,6 +67,8 @@ ul {
             font-family: $tipografia; 
             display: inline; 
             font-size: large;
+            width: 90%;
+            max-width: 1000px;
         }
 
         .nav-link:hover {
@@ -80,11 +82,26 @@ ul {
             width: auto;
             text-align: left;
             background-color: $color-cremita;            
-            white-space:pre-line;           
+            white-space: normal;           
             border-color: $color-rosa-oscuro;
             border: 2px solid $color-rosa-oscuro;
             border-radius: 8px;
             padding-right: 10px;
+
+            .buscador-menu {
+                color: $color-rosa-oscuro;
+                padding: 5px;
+            }
+
+            .buscador-menu:focus {
+                outline: none;
+            }
+
+            .buscador-menu:hover {
+                background-color: $color-rosa-clarito;
+                border: 2px solid $color-rosa-oscuro;
+                border-radius: 16px;
+            }
            
             
 
@@ -95,7 +112,7 @@ ul {
                 width: 100%;    
                 display: block;                       
                 font-family: $tipografia;
-                font-size: small; 
+                font-size: medium; 
                 padding: 0; 
                 padding-left: 2%;     
                 padding-right: 2%;         
@@ -107,11 +124,18 @@ ul {
             .dropdown-item:hover {
                 background-color: transparent;
                 font-weight: bold;
+               
             }
 
-            
+           
         } 
     }
+}
+
+::placeholder {
+    color: $color-rosa-oscuro;
+    padding: 5px;
+    text-align: center;
 }
 
 .menu-fixed {
