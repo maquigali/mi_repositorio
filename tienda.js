@@ -27,47 +27,54 @@ const btnTosty = document.querySelector("#tostyAgregado")
 
 
 //filtro-buscador
-// let productosprueba  = [
-//     {nombre:"Pelotas", valor: 500},
-//     {nombre:"Cubo", valor: 500},
-//     {nombre:"Memotest", valor:500},
+let productosprueba  = [
+    {nombre:"Pelotas", valor: 500},
+    {nombre:"Cubo", valor: 500},
+    {nombre:"Memotest", valor:500}
+
+]
 
 
-// ]
 
 
-// const formulario = document.querySelector("#buscador-formulario")
 
-// const botonBuscador = document.querySelector("#boton-buscador")
-// const resultado = document.querySelector("#resultado")
+const formulario = document.querySelector("#buscador-formulario")
 
-// const filtrar = () =>{
-//     resultado.innerHTML = ""
+const botonBuscador = document.querySelector("#boton-buscador")
+const resultado = document.querySelector("#resultado")
 
-//     const texto = formulario.value.toLowerCase()
+const filtrar = () =>{
+    resultado.innerHTML = ""
 
-//     for(let producto of productosprueba){
-//         let nombre = producto.nombre.toLowerCase()
-//         if(nombre.indexOf(texto) !== -1){
-//             resultado.innerHTML += `
-//             <li>${producto.nombre}</li>
-//             `
+    const texto = formulario.value.toLowerCase()
 
-//         }
+    for(let producto of productosprueba){
+        let nombre = producto.nombre.toLowerCase()
 
-//     }
+        if(nombre.indexOf(texto) !== -1){
 
-//     if(resultado.innerHTML === ""){
-//         resultado.innerHTML += `
-//         <li>PRODCUTO NO ENCONTRADO </li>
-//         `
-//     }
-// }
+            const div = document.createElement("li")
+            div.classList.add("resultado")
 
-// botonBuscador.addEventListener("click", filtrar)
-// formulario.addEventListener("keyup", filtrar)
+            resultado.innerHTML += `
+            <li>${producto.nombre}</li>
+            `
 
-// filtrar()
+        }
+
+    }
+
+    if(resultado.innerHTML === ""){
+        resultado.innerHTML += `
+        <li>PRODUCTO NO ENCONTRADO </li>
+        `
+    }
+}
+
+
+formulario.addEventListener("keyup", filtrar)
+
+filtrar()
 
 //modal
 openModal.addEventListener("click", () => {
