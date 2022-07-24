@@ -155,6 +155,25 @@ box-sizing: border-box;
     @extend .btn-ghost:hover
 }
 
+.boton-productos-carrito {
+    font-size: 20px; 
+    color: $color-principal;
+    background-color: transparent;
+    border-radius: 12px;
+    border: 3px solid $color-principal;
+    width: 200px;
+    font-family: $tipografia;
+
+}
+
+.boton-productos-carrito:hover {
+    color: $color-principal;
+}
+
+.boton-productos-carrito:focus {
+    outline: none;
+}
+
 .boton-enviar {
     font-size: 20px; 
     color: $color-cremita;
@@ -424,6 +443,20 @@ box-sizing: border-box;
     }
 }
 
+
+.volver-tienda {
+    color: $color-rosa-oscuro;
+    font-size: medium;
+    font-family: $tipografia;
+    text-decoration: none;
+    padding-top: 5px;
+
+}
+
+.volver-tienda:hover {
+    color: $color-rosa-oscuro;
+    font-weight: bold;
+}
 /*modal*/
 .modal-contenedor {
     width: 100%;

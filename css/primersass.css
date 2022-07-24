@@ -238,6 +238,21 @@ ul {
   width: 200px;
   font-family: "Poppins", sans-serif; }
 
+.boton-productos-carrito {
+  font-size: 20px;
+  color: #78a1a6;
+  background-color: transparent;
+  border-radius: 12px;
+  border: 3px solid #78a1a6;
+  width: 200px;
+  font-family: "Poppins", sans-serif; }
+
+.boton-productos-carrito:hover {
+  color: #78a1a6; }
+
+.boton-productos-carrito:focus {
+  outline: none; }
+
 .boton-enviar {
   font-size: 20px;
   color: #faf0e5;
@@ -394,6 +409,17 @@ ul {
   row-gap: 50px; }
   .grid-productos .elementos-productos {
     text-align: center; }
+
+.volver-tienda {
+  color: #DB9996;
+  font-size: medium;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  padding-top: 5px; }
+
+.volver-tienda:hover {
+  color: #DB9996;
+  font-weight: bold; }
 
 /*modal*/
 .modal-contenedor {
