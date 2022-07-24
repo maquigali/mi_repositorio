@@ -115,12 +115,13 @@ fetch ("../tienda.json")
                                     <div>
                                         <img src=${item.img} class="img-fluid" alt="arcoiris" style="border: 3px solid #78A1A6"> 
                                         <h2 class="grid-prod-b1-descripcion"> <br> ${item.nombre} <br> </h2> 
-                                        <h3 class="grid-prod-b1-descripcion"> PRECIO: $ ${item.precio}</h3>                                        
+                                        <h3 class="grid-prod-b1-descripcion"> PRECIO: $ ${item.precio}</h3>   
+
                                         <div class="justify-content-center">
-                                        <form  class="justify-content-center" action=${item.href}>
-                                          <button class="boton-mas-info btn" type="submit"> MÁS INFO </button>
-                                        </form>
-                                        </div>                                   
+                                            <form  class="justify-content-center" action=${item.href}>
+                                                <button class="boton-mas-info btn" type="submit"> MÁS INFO </button>
+                                            </form>
+                                        </div>                                 
                                         
                                         <div class="justify-content-center">
                                             <button onclick="agregarAlCarrito(${item.id})" id="tostyAgregado" class="btn-ghost btn boton-agregar"> LO QUIERO! </button>   
@@ -233,24 +234,21 @@ const renderTotal = () => {
     carrito.forEach((producto) => {
         total += producto.precio
 
-        // if (renderCantidad >= 3){
-
-
-            
-            
-            
-            
-            
+        
     
         })
 
-
+        if (carrito.length >= 3){
+        total = descuento (total) 
+        
+        }
         precioTotal.innerText = total
 
 }
 
+
 function descuento (total, porcentaje){
-return total - (total * porcentaje / 100)
+return total * (1-porcentaje)
 }
 
 descuento(100, 10)
