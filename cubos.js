@@ -12,6 +12,7 @@ contadorCarrito.innerText = cantidad
 
 
 
+
 //filtro-buscador BARRA MENU
 
 const formulario = document.querySelector("#buscador-formulario")
