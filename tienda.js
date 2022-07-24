@@ -118,7 +118,7 @@ fetch ("../tienda.json")
                                         <h3 class="grid-prod-b1-descripcion"> PRECIO: $ ${item.precio}</h3>
                                         
                                         <div class="justify-content-center">
-                                        <form  class="d-flex justify-content-center div-boton-masinfo" action="../pages/p-librito.html">
+                                        <form  class="d-flex justify-content-center div-boton-masinfo" action=${item.href}>
                                           <button class="boton-mas-info btn" type="submit"> MÁS INFO </button>
                                         </form>
                                         </div>    
