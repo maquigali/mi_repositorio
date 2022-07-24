@@ -117,10 +117,14 @@ fetch ("../tienda.json")
                                         <h2 class="grid-prod-b1-descripcion"> <br> ${item.nombre} <br> </h2> 
                                         <h3 class="grid-prod-b1-descripcion"> PRECIO: $ ${item.precio}</h3>
                                         
-                                        <div class="justify-content-center div-boton-masinfo">                                         
-                                          <button onclick="../pages/p-librito.html" class="boton-mas-info btn" type="submit"> MÁS INFO </button>
-                                        
+                                        <div class="justify-content-center">
+                                        <form  class="d-flex justify-content-center div-boton-masinfo" action="../pages/p-librito.html">
+                                          <button class="boton-mas-info btn" type="submit"> MÁS INFO </button>
+                                        </form>
                                         </div>    
+                                        
+                                        
+                                        
                                         <div class="justify-content-center">
                                             <button onclick="agregarAlCarrito(${item.id})" id="tostyAgregado" class="btn-ghost btn boton-agregar"> LO QUIERO! </button>   
                                         </div>
