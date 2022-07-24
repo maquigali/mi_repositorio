@@ -240,7 +240,7 @@ const renderTotal = () => {
 
         
     
-        })
+        }) //descuento
 
         if (carrito.length >= 3){
         total = descuento (total, 0.10) 
@@ -249,8 +249,6 @@ const renderTotal = () => {
         precioTotal.innerText = total
 
 }
-
-
 
 
 
