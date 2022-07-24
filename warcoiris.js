@@ -13,6 +13,19 @@ const contadorCarrito = document.getElementById("contadorCarritoAI")
 contadorCarrito.innerText = cantidad
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 // const lista = document.getElementById("productos-wa")
 
 // fetch ("../tienda.json")

@@ -70,14 +70,16 @@ const filtrar = () =>{
             `
 
         }
+        else if (resultado.innerHTML === "") {
+            resultado.innerHTML += `
+         <li> <a class="dropdown-item h3"> Ups! No tenemos ese producto </a> </li>
+         `
+
+        }
 
     }
 
-    if(resultado.innerHTML === ""){
-        resultado.innerHTML += `
-        <li> <a class="dropdown-item h3"> Ups! No tenemos ese producto </a> </li>
-        `
-    }
+   
 }
 
 
@@ -113,10 +115,16 @@ fetch ("../tienda.json")
                                     <div>
                                         <img src=${item.img} class="img-fluid" alt="arcoiris" style="border: 3px solid #78A1A6"> 
                                         <h2 class="grid-prod-b1-descripcion"> <br> ${item.nombre} <br> </h2> 
-                                        <h3 class="grid-prod-b1-descripcion"> PRECIO: $ ${item.precio}</h3> 
+                                        <h3 class="grid-prod-b1-descripcion"> PRECIO: $ ${item.precio}</h3>
+                                        
+                                        <div class="justify-content-center div-boton-masinfo">                                         
+                                          <button onclick="../pages/p-librito.html" class="boton-mas-info btn" type="submit"> MÁS INFO </button>
+                                        
+                                        </div>    
                                         <div class="justify-content-center">
                                             <button onclick="agregarAlCarrito(${item.id})" id="tostyAgregado" class="btn-ghost btn boton-agregar"> LO QUIERO! </button>   
                                         </div>
+
                                     </div>                        
         
                                 </div>
@@ -224,6 +232,14 @@ const renderTotal = () => {
     carrito.forEach((producto) => {
         total += producto.precio
 
+        // if (renderCantidad >= 3){
+
+
+            
+            
+            
+            
+            
     
         })
 
@@ -232,6 +248,12 @@ const renderTotal = () => {
 
 }
 
+function descuento (total, porcentaje){
+return total - (total * porcentaje / 100)
+}
+
+descuento(100, 10)
+console.log (descuento(100, 10))
 
 //carritoLS
 
