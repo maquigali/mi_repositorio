@@ -229,6 +229,10 @@ const renderCantidad = () => {
 
 //total $$
 
+function descuento (total, porcentaje){
+    return total * (1-porcentaje)
+    }
+
 const renderTotal = () => {
     let total = 0
     carrito.forEach((producto) => {
@@ -239,7 +243,7 @@ const renderTotal = () => {
         })
 
         if (carrito.length >= 3){
-        total = descuento (total) 
+        total = descuento (total, 0.10) 
         
         }
         precioTotal.innerText = total
@@ -247,12 +251,9 @@ const renderTotal = () => {
 }
 
 
-function descuento (total, porcentaje){
-return total * (1-porcentaje)
-}
 
-descuento(100, 10)
-console.log (descuento(100, 10))
+
+
 
 //carritoLS
 
